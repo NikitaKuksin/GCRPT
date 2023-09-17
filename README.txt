@@ -1,0 +1,1 @@
+This application predicts in-hospital mortality in patients who have had an ST-segment elevation myocardial infarction and undergone PCI. The forecast is carried out using a neural network contained in the "Model.mas" file. The sum of scores of the “GRACE”, “TIMI”, “CADILLAC”, “PAMI”, “RECORD” scales are used as predictors of mortality.
