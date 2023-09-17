@@ -1,0 +1,709 @@
+{
+"Name":"GCRPT",
+"Type":"MainFrame",
+"Theme":"clearlooks",
+"Geometry":"1000x800",
+"Children":[
+    
+    {
+        "Name":"Функциональные характеристики",
+        "Type":"Frame",
+        "Row":0,
+        "Column":0,
+        "Padx":3,
+        "Pady":3,
+        "Sticky":"nwe",
+        "Children":[
+        
+                {
+                    "Name":"Первичный осмотр",
+                    "Type":"Frame",
+                    "Row":0,
+                    "Column":0,
+                    "Padx":3,
+                    "Pady":3,
+                    "Sticky":"wnes",        
+                    "Children":[
+                        {
+                            "Name":"Вес",
+                            "Type":"Entery",
+                            "Row":1,
+                            "Column":0,
+                            "Padx":21,
+                            "Pady":5,                
+                            "Sticky":"nwe",
+                            "MinValue":0,
+                            "MaxValue":300,
+                            "Children":[],
+                            "Dependents":[
+                                {
+                                    "Path":"GCRPT/Шкалы/TIMI-STe",
+                                    "Thresholds":[  {"Value":67,"Sign":"<","Rating":1},
+                                                    {"Value":67,"Sign":">=","Rating":0}]
+                                }
+                            ]
+                        },
+                        {
+                            "Name":"Возраст",
+                            "Type":"Entery",
+                            "Row":2,
+                            "Column":0,
+                            "Padx":21,
+                            "Pady":5,                
+                            "Sticky":"nwe",
+                            "MinValue":0,
+                            "MaxValue":150,
+                            "Children":[],
+                            "Dependents":[
+                                {
+                                    "Path":"GCRPT/Шкалы/GRACE",
+                                    "Thresholds":[  {"Value":30,"Sign":"<","Rating":0},
+                                                    {"Value":40,"Sign":"<","Rating":8},
+                                                    {"Value":50,"Sign":"<","Rating":25},
+                                                    {"Value":60,"Sign":"<","Rating":41},
+                                                    {"Value":70,"Sign":"<","Rating":58},
+                                                    {"Value":80,"Sign":"<","Rating":75},
+                                                    {"Value":90,"Sign":"<","Rating":91},
+                                                    {"Value":90,"Sign":">=","Rating":100}]
+                                },
+                                {
+                                    "Path":"GCRPT/Шкалы/CADILLAC",
+                                    "Thresholds":[  {"Value":65,"Sign":"<=","Rating":0},
+                                                    {"Value":65,"Sign":">","Rating":2}]
+                                },
+                                {
+                                    "Path":"GCRPT/Шкалы/PAMI",
+                                    "Thresholds":[  {"Value":65,"Sign":"<","Rating":0},
+                                                    {"Value":75,"Sign":"<=","Rating":3},
+                                                    {"Value":75,"Sign":">","Rating":7}]
+                                },
+                                {
+                                    "Path":"GCRPT/Шкалы/RECORD",
+                                    "Thresholds":[  {"Value":65,"Sign":"<","Rating":0},
+                                                    {"Value":65,"Sign":">=","Rating":1}]
+                                }
+                            ]
+                        }
+                ]},          
+                {
+                    "Name":"Результаты инструментальных исследований",
+                    "Type":"Frame",
+                    "Row":2,
+                    "Column":0,
+                    "Padx":3,
+                    "Pady":3,
+                    "Sticky":"wnes",        
+                    "Children":[
+                        {
+                            "Name":"Систолическое артериальное давление",
+                            "Type":"Entery",
+                            "Row":1,
+                            "Column":0,
+                            "Padx":5,
+                            "Pady":5,                
+                            "Sticky":"wn",
+                            "MinValue":0,
+                            "MaxValue":300,
+                            "Children":[],
+                            "Dependents":[
+                                {
+                                    "Path":"GCRPT/Шкалы/GRACE",
+                                    "Thresholds":[  {"Value":80,"Sign":"<=","Rating":58},
+                                                    {"Value":99,"Sign":"<=","Rating":53},
+                                                    {"Value":119,"Sign":"<=","Rating":43},
+                                                    {"Value":139,"Sign":"<=","Rating":34},
+                                                    {"Value":159,"Sign":"<=","Rating":24},
+                                                    {"Value":199,"Sign":"<=","Rating":10},
+                                                    {"Value":199,"Sign":">","Rating":0}]
+                                },
+                                {
+                                    "Path":"GCRPT/Шкалы/TIMI-STe",
+                                    "Thresholds":[  {"Value":100,"Sign":"<","Rating":3},
+                                                    {"Value":100,"Sign":">=","Rating":0}]
+                                },
+                                {
+                                    "Path":"GCRPT/Шкалы/RECORD",
+                                    "Thresholds":[  {"Value":100,"Sign":"<","Rating":1},
+                                                    {"Value":100,"Sign":">=","Rating":0}]
+                                }
+                            ]
+                        },
+                        {
+                            "Name":"Частота сердечных сокращений",
+                            "Type":"Entery",
+                            "Row":2,
+                            "Column":0,
+                            "Padx":5,
+                            "Pady":5,                
+                            "Sticky":"wn",
+                            "MinValue":0,
+                            "MaxValue":300,
+                            "Children":[],
+                            "Dependents":[
+                                {
+                                    "Path":"GCRPT/Шкалы/GRACE",
+                                    "Thresholds":[  {"Value":50,"Sign":"<=","Rating":0},
+                                                    {"Value":69,"Sign":"<=","Rating":3},
+                                                    {"Value":89,"Sign":"<=","Rating":9},
+                                                    {"Value":109,"Sign":"<=","Rating":15},
+                                                    {"Value":149,"Sign":"<=","Rating":24},
+                                                    {"Value":199,"Sign":"<=","Rating":38},
+                                                    {"Value":199,"Sign":">","Rating":46}]
+                                },
+                                {
+                                    "Path":"GCRPT/Шкалы/TIMI-STe",
+                                    "Thresholds":[  {"Value":100,"Sign":"<","Rating":0},
+                                                    {"Value":100,"Sign":">=","Rating":2}]
+                                },
+                                {
+                                    "Path":"GCRPT/Шкалы/PAMI",
+                                    "Thresholds":[  {"Value":100,"Sign":">","Rating":2},
+                                                    {"Value":100,"Sign":"<=","Rating":0}]
+                                }
+                            ]
+                        },
+                        {
+                            "Name":"Класс ОСН по Killip",
+                            "Type":"Combobox",
+                            "Values":[0,1,2,3,4],
+                            "Row":3,
+                            "Column":0,
+                            "Padx":5,
+                            "Pady":5,
+                            "Sticky":"wn",
+                            "Children":[],
+                            "Dependents":[
+                                {
+                                    "Path":"GCRPT/Шкалы/GRACE",
+                                    "Thresholds":[  {"Value":0,"Sign":"==","Rating":0},
+                                                    {"Value":1,"Sign":"==","Rating":0},
+                                                    {"Value":2,"Sign":"==","Rating":20},
+                                                    {"Value":3,"Sign":"==","Rating":39},
+                                                    {"Value":4,"Sign":"==","Rating":59}
+                                                ]
+                                },
+                                {
+                                    "Path":"GCRPT/Шкалы/TIMI-STe",
+                                    "Thresholds":[  {"Value":0,"Sign":"==","Rating":0},
+                                                    {"Value":1,"Sign":"==","Rating":0},
+                                                    {"Value":2,"Sign":"==","Rating":2},
+                                                    {"Value":3,"Sign":"==","Rating":2},
+                                                    {"Value":4,"Sign":"==","Rating":2}
+                                                ]
+                                },
+                                {
+                                    "Path":"GCRPT/Шкалы/CADILLAC",
+                                    "Thresholds":[  {"Value":0,"Sign":"==","Rating":0},
+                                                    {"Value":1,"Sign":"==","Rating":0},
+                                                    {"Value":2,"Sign":"==","Rating":3},
+                                                    {"Value":3,"Sign":"==","Rating":3},
+                                                    {"Value":4,"Sign":"==","Rating":3}
+                                                ]
+                                },
+                                {
+                                    "Path":"GCRPT/Шкалы/PAMI",
+                                    "Thresholds":[  {"Value":0,"Sign":"==","Rating":0},
+                                                    {"Value":1,"Sign":"==","Rating":0},
+                                                    {"Value":2,"Sign":"==","Rating":2},
+                                                    {"Value":3,"Sign":"==","Rating":2},
+                                                    {"Value":4,"Sign":"==","Rating":2}
+                                                ]
+                                },
+                                {
+                                    "Path":"GCRPT/Шкалы/RECORD",
+                                    "Thresholds":[  {"Value":0,"Sign":"==","Rating":0},
+                                                    {"Value":1,"Sign":"==","Rating":0},
+                                                    {"Value":2,"Sign":"==","Rating":1},
+                                                    {"Value":3,"Sign":"==","Rating":1},
+                                                    {"Value":4,"Sign":"==","Rating":1}
+                                                ]
+                                }
+                            ]
+                        }
+
+                        
+                ]},
+                {
+                    "Name":"Результаты лабораторных анализов",
+                    "Type":"Frame",
+                    "Row":3,
+                    "Column":0,
+                    "Padx":3,
+                    "Pady":3,
+                    "Sticky":"wnes",        
+                    "Children":[
+                        {
+                            "Name":"Уровень креатинина в крови",
+                            "Type":"Entery",
+                            "Row":1,
+                            "Column":0,
+                            "Padx":5,
+                            "Pady":5,                
+                            "Sticky":"wn",
+                            "MinValue":0,
+                            "MaxValue":1000,
+                            "Children":[],
+                            "Dependents":[
+                                {
+                                    "Path":"GCRPT/Шкалы/GRACE",
+                                    "Thresholds":[  {"Value":35.36,"Sign":"<","Rating":1},
+                                                    {"Value":70.71,"Sign":"<","Rating":4},
+                                                    {"Value":106.07,"Sign":"<","Rating":7},
+                                                    {"Value":141.43,"Sign":"<","Rating":10},
+                                                    {"Value":176.7,"Sign":"<","Rating":13},
+                                                    {"Value":353,"Sign":"<","Rating":21},
+                                                    {"Value":353,"Sign":">=","Rating":28}]
+                                }
+                            ]
+                        },
+                        {
+                            "Name":"Скорость клубочковой фильтрации",
+                            "Type":"Entery",
+                            "Row":2,
+                            "Column":0,
+                            "Padx":5,
+                            "Pady":5,                
+                            "Sticky":"wn",
+                            "MinValue":0,
+                            "MaxValue":1000,
+                            "Children":[],
+                            "Dependents":[
+                                {
+                                    "Path":"GCRPT/Шкалы/CADILLAC",
+                                    "Thresholds":[  {"Value":60,"Sign":"<","Rating":3},
+                                                    {"Value":60,"Sign":">=","Rating":0}
+                                                ]
+                                }
+                            ]
+                        },
+                        {
+                            "Name":"Уровень гемоглобина в крови",
+                            "Type":"Entery",
+                            "Row":3,
+                            "Column":0,
+                            "Padx":5,
+                            "Pady":5,                
+                            "Sticky":"wn",
+                            "MinValue":0,
+                            "MaxValue":1000,
+                            "Children":[],
+                            "Dependents":[
+                                {
+                                    "Path":"GCRPT/Шкалы/RECORD",
+                                    "Thresholds":[  {"Value":100,"Sign":"<=","Rating":1},
+                                                    {"Value":100,"Sign":">","Rating":0}
+                                                ]
+                                }
+                            ]
+                        },
+                        {
+                            "Name":"Повышенный уровень маркеров некроза миокарда в крови",
+                            "Type":"Combobox",
+                            "Values":["Да","Нет"],
+                            "Row":4,
+                            "Column":0,
+                            "Padx":5,
+                            "Pady":5,
+                            "Sticky":"wn",
+                            "Children":[],
+                            "Dependents":[
+                                {
+                                    "Path":"GCRPT/Шкалы/GRACE",
+                                    "Thresholds":[  {"Value":"Да","Sign":"==","Rating":14},
+                                                    {"Value":"Нет","Sign":"==","Rating":0}
+                                                ]
+                                }
+                            ]
+                        },
+                        {
+                            "Name":"ФВ ЛЖ",
+                            "Type":"Entery",
+                            "Row":5,
+                            "Column":0,
+                            "Padx":5,
+                            "Pady":5,                
+                            "Sticky":"wn",
+                            "MinValue":0,
+                            "MaxValue":100,
+                            "Children":[],
+                            "Dependents":[
+                                {
+                                    "Path":"GCRPT/Шкалы/CADILLAC",
+                                    "Thresholds":[  {"Value":40,"Sign":"<","Rating":4},
+                                                    {"Value":40,"Sign":">=","Rating":0}
+                                                ]
+                                }
+                            ]
+                        },
+                        {
+                            "Name":"ИМ с подъемом сегмента ST",
+                            "Type":"Combobox",
+                            "Values":["Да","Нет"],
+                            "Row":6,
+                            "Column":0,
+                            "Padx":5,
+                            "Pady":5,
+                            "Sticky":"wn",
+                            "Children":[],
+                            "Dependents":[
+                                {
+                                    "Path":"GCRPT/Шкалы/GRACE",
+                                    "Thresholds":[  {"Value":"Да","Sign":"==","Rating":28},
+                                                    {"Value":"Нет","Sign":"==","Rating":0}
+                                                ]
+                                },
+                                {
+                                    "Path":"GCRPT/Шкалы/TIMI-STe",
+                                    "Thresholds":[  {"Value":"Да","Sign":"==","Rating":1},
+                                                    {"Value":"Нет","Sign":"==","Rating":0}
+                                                ]
+                                },
+                                {
+                                    "Path":"GCRPT/Шкалы/RECORD",
+                                    "Thresholds":[  {"Value":"Да","Sign":"==","Rating":1},
+                                                    {"Value":"Нет","Sign":"==","Rating":0}
+                                                ]
+                                }
+                            ]
+                        },
+                        {
+                            "Name":"Кровоток по TIMI",
+                            "Type":"Combobox",
+                            "Values":[0,1,2,3,4],
+                            "Row":7,
+                            "Column":0,
+                            "Padx":5,
+                            "Pady":5,
+                            "Sticky":"wn",
+                            "Children":[],
+                            "Dependents":[
+                                {
+                                    "Path":"GCRPT/Шкалы/CADILLAC",
+                                    "Thresholds":[  
+                                                    {"Value":0,"Sign":"==","Rating":2},
+                                                    {"Value":1,"Sign":"==","Rating":2},
+                                                    {"Value":2,"Sign":"==","Rating":2},
+                                                    {"Value":3,"Sign":"==","Rating":0},
+                                                    {"Value":4,"Sign":"==","Rating":0}
+                                                ]
+                                }
+                            ]
+                        },
+                        {
+                            "Name":"Количество пораженных сосудов",
+                            "Type":"Entery",
+                            "Row":8,
+                            "Column":0,
+                            "Padx":5,
+                            "Pady":5,                
+                            "Sticky":"wn",
+                            "MinValue":0,
+                            "MaxValue":50,
+                            "Children":[],
+                            "Dependents":[
+                                {
+                                    "Path":"GCRPT/Шкалы/CADILLAC",
+                                    "Thresholds":[  {"Value":3,"Sign":"<","Rating":0},
+                                                    {"Value":3,"Sign":">=","Rating":2}
+                                                ]
+                                }
+                            ]
+                        }
+                ]},
+                {
+                    "Name":"Анамнез",
+                    "Type":"Frame",
+                    "Row":4,
+                    "Column":0,
+                    "Padx":3,
+                    "Pady":3,
+                    "Sticky":"wnes",        
+                    "Children":[
+                        {
+                            "Name":"Сахарный диабет",
+                            "Type":"Combobox",
+                            "Values":["Да","Нет"],
+                            "Row":1,
+                            "Column":0,
+                            "Padx":5,
+                            "Pady":5,
+                            "Sticky":"wn",
+                            "Children":[],
+                            "Dependents":[
+                                {
+                                    "Path":"GCRPT/Шкалы/TIMI-STe",
+                                    "Thresholds":[  {"Value":"Да","Sign":"==","Rating":1},
+                                                    {"Value":"Нет","Sign":"==","Rating":0}
+                                                ]
+                                },
+                                {
+                                    "Path":"GCRPT/Шкалы/PAMI",
+                                    "Thresholds":[  {"Value":"Да","Sign":"==","Rating":1},
+                                                    {"Value":"Нет","Sign":"==","Rating":0}
+                                                ]
+                                },
+                                {
+                                    "Path":"GCRPT/Шкалы/RECORD",
+                                    "Thresholds":[  {"Value":"Да","Sign":"==","Rating":1},
+                                                    {"Value":"Нет","Sign":"==","Rating":0}
+                                                ]
+                                }
+                            ]
+                        },
+                        {
+                            "Name":"Гипертоническая болезнь",
+                            "Type":"Combobox",
+                            "Values":["Да","Нет"],
+                            "Row":2,
+                            "Column":0,
+                            "Padx":5,
+                            "Pady":5,
+                            "Sticky":"wn",
+                            "Children":[],
+                            "Dependents":[
+                                {
+                                    "Path":"GCRPT/Шкалы/TIMI-STe",
+                                    "Thresholds":[  {"Value":"Да","Sign":"==","Rating":1},
+                                                    {"Value":"Нет","Sign":"==","Rating":0}
+                                                ]
+                                }
+                            ]
+                        },
+                        {
+                            "Name":"Вид инфаркта миокарда",
+                            "Type":"Combobox",
+                            "Values":["Передний ИМ","Задний ИМ"],
+                            "Row":3,
+                            "Column":0,
+                            "Padx":5,
+                            "Pady":5,
+                            "Sticky":"wn",
+                            "Children":[],
+                            "Dependents":[
+                                {
+                                    "Path":"GCRPT/Шкалы/PAMI",
+                                    "Thresholds":[  {"Value":"Передний ИМ","Sign":"==","Rating":2},
+                                                    {"Value":"Задний ИМ","Sign":"==","Rating":0}
+                                                ]
+                                }
+                            ]
+                        },
+                        {
+                            "Name":"Медицинская помощь оказана за первые 4 часа",
+                            "Type":"Combobox",
+                            "Values":["Да","Нет"],
+                            "Row":4,
+                            "Column":0,
+                            "Padx":5,
+                            "Pady":5,
+                            "Sticky":"wn",
+                            "Children":[],
+                            "Dependents":[
+                                {
+                                    "Path":"GCRPT/Шкалы/TIMI-STe",
+                                    "Thresholds":[  {"Value":"Да","Sign":"==","Rating":1},
+                                                    {"Value":"Нет","Sign":"==","Rating":0}
+                                                ]
+                                }
+                            ]
+                        },
+                        {
+                            "Name":"Остановка сердца на момент поступления",
+                            "Type":"Combobox",
+                            "Values":["Да","Нет"],
+                            "Row":5,
+                            "Column":0,
+                            "Padx":5,
+                            "Pady":5,
+                            "Sticky":"wn",
+                            "Children":[],
+                            "Dependents":[
+                                {
+                                    "Path":"GCRPT/Шкалы/GRACE",
+                                    "Thresholds":[  {"Value":"Да","Sign":"==","Rating":39},
+                                                    {"Value":"Нет","Sign":"==","Rating":0}
+                                                ]
+                                }
+                            ]
+                        }
+                        
+                ]}
+        ]
+    },
+    {
+        "Name":"Шкалы",
+        "Type":"Frame",
+        "Row":0,
+        "Column":1,
+        "Padx":3,
+        "Pady":3,
+        "Sticky":"nwe",
+        "Children":[
+            {
+                "Name":"GRACE",
+                "Type":"Entery",
+                "Row":1,
+                "Column":0,
+                "Padx":5,
+                "Pady":5,                
+                "Sticky":"nwe",
+                "MinValue":0,
+                "MaxValue":500,
+                "Children":[]
+            },
+            {
+                "Name":"TIMI-STe",
+                "Type":"Entery",
+                "Row":2,
+                "Column":0,
+                "Padx":5,
+                "Pady":5,                
+                "Sticky":"nwe",
+                "MinValue":0,
+                "MaxValue":500,
+                "Children":[]
+            },
+            {
+                "Name":"CADILLAC",
+                "Type":"Entery",
+                "Row":3,
+                "Column":0,
+                "Padx":5,
+                "Pady":5,                
+                "Sticky":"nwe",
+                "MinValue":0,
+                "MaxValue":500,
+                "Children":[]
+            },
+            {
+                "Name":"PAMI",
+                "Type":"Entery",
+                "Row":4,
+                "Column":0,
+                "Padx":5,
+                "Pady":5,                
+                "Sticky":"nwe",
+                "MinValue":0,
+                "MaxValue":500,
+                "Children":[]
+            },
+            {
+                "Name":"RECORD",
+                "Type":"Entery",
+                "Row":5,
+                "Column":0,
+                "Padx":5,
+                "Pady":5,                
+                "Sticky":"nwe",
+                "MinValue":0,
+                "MaxValue":500,
+                "Children":[]
+            }
+        ]
+    },
+    {
+        "Name":"Прогнозирование",
+        "Type":"Frame",
+        "Row":0,
+        "Column":2,
+        "Padx":3,
+        "Pady":3,
+        "Sticky":"nwe",
+        "Children":[
+            {
+                "Name":"AAN",
+                "ButtonText":"Получить прогноз",
+                "Type":"Solver",
+                "Row":1,
+                "Column":0,
+                "Padx":3,
+                "Pady":3,
+                "Sticky":"nwe",
+                "ModelFile":"Model.mas",
+                "Predictors":[
+                        {"Path":"GCRPT/Шкалы/GRACE","Elemnt":""},
+                        {"Path":"GCRPT/Шкалы/CADILLAC","Elemnt":""},
+                        {"Path":"GCRPT/Шкалы/RECORD","Elemnt":""},
+                        {"Path":"GCRPT/Шкалы/PAMI","Elemnt":""},
+                        {"Path":"GCRPT/Шкалы/TIMI-STe","Elemnt":""}
+                ],
+                "OutputLables":[
+                    {
+                        "Path":"GCRPT/Прогнозирование/Риск смерти",
+                        "Thresholds":[  {"Value":3,"Sign":"<","Rating":{"value":"Низкий риск смерти","background":"green","foreground":"black"}},
+                                        {"Value":9,"Sign":"<=","Rating":{"value":"Средний риск смерти","background":"yellow","foreground":"black"}},
+                                        {"Value":17,"Sign":"<=","Rating":{"value":"Высокий риск смерти","background":"orange","foreground":"black"}},
+                                        {"Value":17,"Sign":">","Rating":{"value":"Очень высокий риск смерти","background":"red","foreground":"black"}}
+                        ]
+                    },
+                    {
+                        "Path":"GCRPT/Прогнозирование/Вероятность смерти больного",
+                        "Thresholds":[  {"Value":3,"Sign":"<","Rating":{"value":"__equivalent__","background":"green","foreground":"black"}},
+                                        {"Value":9,"Sign":"<=","Rating":{"value":"__equivalent__","background":"yellow","foreground":"black"}},
+                                        {"Value":17,"Sign":"<=","Rating":{"value":"__equivalent__","background":"orange","foreground":"black"}},
+                                        {"Value":17,"Sign":">","Rating":{"value":"__equivalent__","background":"red","foreground":"black"}}
+                                    ]
+                    }
+                ],
+                "Children":[]
+            },
+            {
+                "Name":"Текст",
+                "Type":"Lable",
+                "Text":"Вероятность смерти больного:",
+                "PatternText":"Вероятность смерти больного:",
+                "ColorText":"",
+                "ColorBackground":"",
+                "Row":2,
+                "Column":0,
+                "Padx":3,
+                "Pady":3,
+                "Sticky":"nwe",
+                "Children":[]
+            },
+            {
+                "Name":"Вероятность смерти больного",
+                "Type":"Lable",
+                "Text":0,
+                "PatternText":"\t{0:.2f}%",
+                "ColorText":"",
+                "ColorBackground":"",
+                "Row":3,
+                "Column":0,
+                "Padx":3,
+                "Pady":3,
+                "Sticky":"nwe",
+                "Children":[]
+            },
+            {
+                "Name":"Текст",
+                "Type":"Lable",
+                "Text":"Риск смерти:",
+                "PatternText":"Риск смерти:",
+                "ColorText":"",
+                "ColorBackground":"",
+                "Row":4,
+                "Column":0,
+                "Padx":3,
+                "Pady":3,
+                "Sticky":"nwe",
+                "Children":[]
+            },
+            {
+                "Name":"Риск смерти",
+                "Type":"Lable",
+                "Text":"\t-",
+                "PatternText":"\t{0}",
+                "ColorText":"",
+                "ColorBackground":"",
+                "Row":5,
+                "Column":0,
+                "Padx":3,
+                "Pady":3,
+                "Sticky":"nwe",
+                "Children":[]
+            }
+        ]
+    }
+
+]}
